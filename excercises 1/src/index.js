@@ -1,9 +1,11 @@
 
 import React from "react";
-import ReactDOM from "react-dom";
-import InputPhone from "./components/InputPhone.js";
+import ReactDOM, { render } from "react-dom";
+import Like from "./components/Like.js";
 
-ReactDOM.render(<InputPhone />, document.getElementById("root"));
+ReactDOM.render(<Like />, document.querySelector("#like"));
+
+
 
 
 
