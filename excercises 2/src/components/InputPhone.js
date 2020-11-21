@@ -1,53 +1,28 @@
 import React, { Component } from 'react';
 import NumberFormat from 'react-number-format';
 
-
-
-
-export default class InputPhone extends Component {
+class InputPhone extends React.Component {
   constructor(props) {
-    super(props)
-
-    this.state = {
-      input: '',
-      numberValid: false
-    };
-
+    super(props);
     this.handleChange = this.handleChange.bind(this);
   }
 
-  handleChange(event) {
-    this.setState({
-      input: event.target.value
-    })
-
+  handleChange(e) {
+    this.props.onChangeInput(e.target.value);
   }
-
-  validate() {
-    // prettier-ignore
-    const regex = /^[(][0-9]{3}[)] [0-9]{3}[-][0-9]{2}[-][0-9]{2}/g;
-    return regex.test(this.state.input);
-  }
+  
+  
 
   render() {
+    const value = this.props.value;
     return (
-
-
-      <div>
-        <h3>Ваш номер</h3>
-        <NumberFormat
-          format="+7(###) ###-##-##" mask="_"
-          name="Введите номер"
-          placeholder='+7(___)___-__-__'
-          onChange={this.handleChange}
-          style={{ borderColor: this.validate() ? 'green' : 'red' }}
-        />
-
-
-        <p>{this.state.input}</p>
-      </div>
-    )
+      <NumberFormat
+        placeholder='+7(___) ___-__-__'
+        format='+7(###) ###-##-##'
+        value={value}
+        onChange={this.handleChange} />
+    );
   }
-
-
 }
+
+export default InputPhone;
