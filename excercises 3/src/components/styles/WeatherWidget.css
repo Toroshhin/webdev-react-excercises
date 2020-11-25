@@ -1,0 +1,26 @@
+.weather-widget {
+  font-family: "Courier New", Courier, "Lucida Sans Typewriter", "Lucida Typewriter", monospace;
+  color: white;
+  background-color: #102f41d3;
+  height: 220px;
+  width: 220px;
+  border-radius: 20px;
+  padding: 10px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.weather-widget__icon {
+  flex-grow: 1;
+  width: 60%;
+}
+
+.weather-widget__top-list {
+  display: flex;
+  flex-wrap: wrap;
+  width: 40%;
+}
+
+.weather-widget__bottom-list {
+  display: flex;
+}
