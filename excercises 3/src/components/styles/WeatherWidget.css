@@ -1,26 +1,48 @@
 .weather-widget {
   font-family: "Courier New", Courier, "Lucida Sans Typewriter", "Lucida Typewriter", monospace;
   color: white;
-  background-color: #102f41d3;
+  background-color: #283138;
   height: 220px;
-  width: 220px;
+  width: 280px;
   border-radius: 20px;
-  padding: 10px;
+  padding: 15px;
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-evenly;
+  margin: 0 auto;
+  margin-top: 50px;
 }
 
 .weather-widget__icon {
-  flex-grow: 1;
-  width: 60%;
+  height: 110px;
+  width: 110px;
+  align-items: flex-end;
 }
 
 .weather-widget__top-list {
+  margin-top: 25px;
   display: flex;
   flex-wrap: wrap;
-  width: 40%;
+  width: 30%;
+  height: 20%;
+  justify-content: center;
+  font-size: 25px;
+  text-align: center;
 }
 
-.weather-widget__bottom-list {
+.weather-widget__info {
+  width: 100%;
   display: flex;
+  flex-wrap: wrap;
+}
+
+.weather-widget__humidity,
+.weather-widget__precipitation,
+.weather-widget__wind {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  width: 33%;
+  justify-content: space-between;
+  padding-bottom: 15px;
 }
