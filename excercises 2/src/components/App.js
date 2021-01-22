@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import react from 'react';
 import Input from './Input';
 import Button from './Button';
 import InputPhone from './InputPhone';

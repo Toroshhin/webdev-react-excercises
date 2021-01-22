@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import NumberFormat from 'react-number-format';
 
 class InputPhone extends React.Component {
@@ -10,8 +10,8 @@ class InputPhone extends React.Component {
   handleChange(e) {
     this.props.onChangeInput(e.target.value);
   }
-  
-  
+
+
 
   render() {
     const value = this.props.value;

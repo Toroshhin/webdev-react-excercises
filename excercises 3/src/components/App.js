@@ -13,8 +13,7 @@ let imgArray = ['./public/icon/sun.png', './public/icon/rain.png', './public/ico
 class App extends React.Component {
   render() {
     return (
-      <WeatherWidget temp={randomInteger(-30, 30)} link={imgArray[randomInteger(0, 4)]} city={'Нижний Новгород'} humidity={randomInteger(50, 80)} precipitation={randomInteger(0, 2)} wind={randomInteger(0, 21)} />
-
+      <WeatherWidget temp={randomInteger(-30, 30)} link={imgArray[randomInteger(0, 4 )]} city={'Нижний Новгород'} humidity={randomInteger(50, 80)} precipitation={randomInteger(0, 2)} wind={randomInteger(0, 21)} />
     )
   }
 }
